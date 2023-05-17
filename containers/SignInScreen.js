@@ -66,10 +66,7 @@ export default function SignInScreen({ setToken }) {
     <View style={styles.container}>
       <KeyboardAwareScrollView>
         <View style={[styles.logoContainer]}>
-          <Image
-            style={styles.logo}
-            source={require("../assets/airbnb-seeklogo.com.png")}
-          />
+          <Image style={styles.logo} source={require("../assets/airbnb.png")} />
           <Text style={styles.screenTitle}>Sign-in</Text>
         </View>
         <View style={styles.formContainer}>

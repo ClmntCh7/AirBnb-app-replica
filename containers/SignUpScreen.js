@@ -88,7 +88,7 @@ function SignUpScreen({ setToken }) {
           <View style={[styles.logoContainer]}>
             <Image
               style={[styles.logo]}
-              source={require("../assets/airbnb-seeklogo.com.png")}
+              source={require("../assets/airbnb.png")}
             />
             <Text style={styles.screenTitle}>Sign-up</Text>
           </View>

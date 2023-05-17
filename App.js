@@ -12,6 +12,9 @@ import SignInScreen from "./containers/SignInScreen";
 import SignUpScreen from "./containers/SignUpScreen";
 import SettingsScreen from "./containers/SettingsScreen";
 import SplashScreen from "./containers/SplashScreen";
+//Components
+import LogoTitle from "./components/Logo";
+import styles from "./styles/Styles";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -75,7 +78,7 @@ export default function App() {
               <Tab.Navigator
                 screenOptions={{
                   headerShown: false,
-                  tabBarActiveTintColor: "tom",
+                  tabBarActiveTintColor: "#F9585D",
                   tabBarInactiveTintColor: "gray",
                 }}
               >
@@ -92,10 +95,10 @@ export default function App() {
                     <Stack.Navigator>
                       <Stack.Screen
                         name="Home"
+                        style={styles.alignCenter}
                         options={{
-                          title: "My App",
-                          headerStyle: { backgroundColor: "red" },
-                          headerTitleStyle: { color: "white" },
+                          headerTitle: () => <LogoTitle />,
+                          headerTitleAlign: "center",
                         }}
                       >
                         {() => <HomeScreen />}
@@ -112,6 +115,7 @@ export default function App() {
                     </Stack.Navigator>
                   )}
                 </Tab.Screen>
+
                 {/* 
                 <Tab.Screen name="AroundMe">
 

@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
 import Constants from "expo-constants";
+import { fill } from "lodash";
 
 const styles = StyleSheet.create({
   container: {
@@ -77,6 +78,29 @@ const styles = StyleSheet.create({
   errorText: {
     color: "red",
     textAlign: "center",
+  },
+
+  //   HOME SCREEN
+
+  logoTitleContainer: {
+    alignContent: "center",
+  },
+
+  logoTitle: {
+    resizeMode: "contain",
+    height: 30,
+    width: 30,
+    flex: 1,
+  },
+
+  loader: {
+    flex: 1,
+  },
+  cardContainer: {
+    height: 100,
+    width: 100,
+    borderBottomColor: "#f0ff",
+    borderWidth: 1,
   },
 });
 
