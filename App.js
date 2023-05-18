@@ -15,6 +15,7 @@ import SplashScreen from "./containers/SplashScreen";
 //Components
 import LogoTitle from "./components/Logo";
 import styles from "./styles/Styles";
+import RoomScreen from "./containers/RoomScreen";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -95,13 +96,22 @@ export default function App() {
                     <Stack.Navigator>
                       <Stack.Screen
                         name="Home"
-                        style={styles.alignCenter}
                         options={{
                           headerTitle: () => <LogoTitle />,
                           headerTitleAlign: "center",
                         }}
                       >
                         {() => <HomeScreen />}
+                      </Stack.Screen>
+
+                      <Stack.Screen
+                        name="RoomScreen"
+                        options={{
+                          headerTitle: () => <LogoTitle />,
+                          headerTitleAlign: "center",
+                        }}
+                      >
+                        {() => <RoomScreen />}
                       </Stack.Screen>
 
                       <Stack.Screen
@@ -116,10 +126,32 @@ export default function App() {
                   )}
                 </Tab.Screen>
 
-                {/* 
-                <Tab.Screen name="AroundMe">
-
-                </Tab.Screen> */}
+                <Tab.Screen
+                  name="AroundMe"
+                  options={{
+                    tabBarLabel: "Around me",
+                    tabBarIcon: ({ color, size }) => (
+                      <Ionicons
+                        name={"ios-location-outline"}
+                        size={size}
+                        color={color}
+                      />
+                    ),
+                  }}
+                >
+                  {() => (
+                    <Stack.Navigator>
+                      <Stack.Screen
+                        name="Settings"
+                        options={{
+                          title: "Settings",
+                        }}
+                      >
+                        {() => <SettingsScreen setToken={setToken} />}
+                      </Stack.Screen>
+                    </Stack.Navigator>
+                  )}
+                </Tab.Screen>
 
                 <Tab.Screen
                   name="TabSettings"

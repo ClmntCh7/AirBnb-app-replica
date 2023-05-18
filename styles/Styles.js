@@ -9,6 +9,10 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
 
+  whiteBackGround: {
+    backgroundColor: "white",
+  },
+
   logoContainer: {
     alignItems: "center",
     marginBottom: 30,
@@ -82,26 +86,89 @@ const styles = StyleSheet.create({
 
   //   HOME SCREEN
 
-  logoTitleContainer: {
-    alignContent: "center",
-  },
-
   logoTitle: {
     resizeMode: "contain",
     height: 30,
     width: 30,
-    flex: 1,
   },
 
   loader: {
     flex: 1,
   },
+
   cardContainer: {
-    height: 100,
-    width: 100,
-    borderBottomColor: "#f0ff",
-    borderWidth: 1,
+    height: 260,
+    width: "100%",
+    borderBottomColor: "#BCBCBC",
+    borderBottomWidth: 1,
+    marginBottom: 20,
   },
+
+  cardPictContainer: {
+    height: 180,
+    width: "100%",
+    position: "relative",
+  },
+
+  flatPict: {
+    resizeMode: "cover",
+    height: "100%",
+    width: "100%",
+  },
+
+  priceContainer: {
+    position: "absolute",
+    height: 40,
+    width: 80,
+    backgroundColor: "black",
+    justifyContent: "center",
+    alignItems: "center",
+    bottom: 5,
+  },
+  price: {
+    color: "white",
+    textAlignVertical: "center",
+    flex: 1,
+  },
+
+  cardDetailsContainer: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  cardDetailsWrapper: {
+    flex: 1,
+    justifyContent: "space-evenly",
+  },
+
+  title: {
+    fontWeight: "bold",
+    fontSize: 14,
+  },
+  ownerPictContainer: {
+    width: "30%",
+    height: "100%",
+    alignItems: "flex-end",
+    justifyContent: "center",
+  },
+
+  ownerPict: {
+    resizeMode: "cover",
+    borderRadius: 50,
+    height: 65,
+    width: 65,
+  },
+  ratesContainer: {
+    flexDirection: "row",
+    gap: 10,
+    alignItems: "center",
+  },
+  scoreContainer: {
+    flexDirection: "row",
+  },
+  // rates: {},
+
+  // reviews: { borderColor: "#f0ff", borderWidth: 2 },
 });
 
 export default styles;

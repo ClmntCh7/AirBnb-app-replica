@@ -5,12 +5,10 @@ import logo from "../assets/airbnb.png";
 
 const LogoTitle = () => {
   return (
-    <SafeAreaView>
-      <Image
-        style={[styles.logoTitle]}
-        source={require("../assets/airbnb.png")}
-      />
-    </SafeAreaView>
+    <Image
+      style={[styles.logoTitle]}
+      source={require("../assets/airbnb.png")}
+    />
   );
 };
 

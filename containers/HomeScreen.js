@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/core";
-import { View, FlatList, ActivityIndicator, Text } from "react-native";
+import { View, FlatList, ActivityIndicator } from "react-native";
 import styles from "../styles/Styles";
 import FlatCard from "../components/FlatCard";
 
@@ -31,15 +31,11 @@ export default function HomeScreen() {
   return isLoading ? (
     <ActivityIndicator size="large" color="#F9585D" style={styles.loader} />
   ) : (
-    <View style={styles.container}>
-      <Text>Hello</Text>
+    <View style={[styles.container, styles.whiteBackGround]}>
       <FlatList
         data={data}
         keyExtractor={(item) => String(item._id)}
-        renderItem={({ item }) => {
-          // <FlatCard item={item} />;
-          <Text>ici</Text>;
-        }}
+        renderItem={({ item }) => <FlatCard item={item} />}
       />
     </View>
   );
